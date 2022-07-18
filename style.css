@@ -47,7 +47,7 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	padding: 20px;
+	padding: 20px 40px;
 	color: #fff;
 	height: 100vh;
 	max-height: 800px;
@@ -77,7 +77,14 @@ ul a {
 	padding: 10px 20px;
 	background-color: #fff;
 	border-radius: 20px;
-	font-weight: 600;
+	font-weight: 400;
+}
+
+.contact:hover {
+	color: #fff;
+	background-color: hsl(202, 93%, 72%);
+	font-family: 'Fraunces', serif;
+	cursor: pointer;
 }
 
 .hero h1 {
@@ -124,12 +131,20 @@ ul a {
 .text1 a {
 	border-bottom: 4px solid hsl(51, 100%, 49%);
 }
+.text1 a:hover {
+	border-bottom: 8px solid hsl(51, 100%, 49%);
+}
+
 .text2 {
 	grid-area: four;
 }
 .text2 a {
 	border-bottom: 4px solid hsl(7, 99%, 70%);
 }
+.text2 a:hover {
+	border-bottom: 8px solid hsl(7, 99%, 70%);
+}
+
 .pic1 {
 	grid-area: two;
 	background-image: url(images/desktop/image-transform.jpg);
@@ -199,14 +214,66 @@ h3 {
 	border-radius: 100%;
 	width: 70px;
 }
+/* gallery */
+.pictures {
+	display: flex;
+	width: 100%;
+}
+.gallery {
+	height: 420px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: none;
+}
+
+.gal1 {
+	background-image: url(images/desktop/image-gallery-milkbottles.jpg);
+}
+.gal2 {
+	background-image: url(images/desktop/image-gallery-orange.jpg);
+}
+.gal3 {
+	background-image: url(images/desktop/image-gallery-cone.jpg);
+}
+.gal4 {
+	background-image: url(images/desktop/image-gallery-sugarcubes.jpg);
+}
 
 /* FOOTER */
 
 footer {
-	background: hsl(168, 34%, 41%);
+	background: hsl(168, 43%, 55%);
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 80px 0;
+}
+
+footer ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 50px;
+	margin-top: 60px;
+	margin-bottom: 100px;
+	align-items: center;
+}
+
+footer ul li:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+.sunny {
+	transform: scale(130%);
+}
+.socials {
+	gap: 30px;
+}
+
+.socials svg path:hover {
+	fill: #fff;
+	cursor: pointer;
 }
 .attribution {
 	font-size: 11px;
@@ -214,4 +281,41 @@ footer {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+	.grid {
+		display: block;
+	}
+
+	.testimonial {
+		flex-direction: column;
+	}
+
+	.testimonial-inner {
+		margin-top: 30px;
+		font-weight: 600;
+		font-size: 20px;
+		padding: 0 20px;
+	}
+
+	.text1 {
+		text-align: center;
+		padding: 20px;
+	}
+	.text2 {
+		text-align: center;
+		padding: 20px;
+	}
+	.grid-area h2 {
+		margin-top: 120px;
+	}
+	.pictures {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.gallery {
+		min-width: 200px;
+	}
 }
