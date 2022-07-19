@@ -91,6 +91,7 @@ ul a {
 
 /* HAMBRGER MENU */
 .menu {
+	display: none;
 	background-color: #fff;
 	color: hsl(232, 10%, 55%);
 	width: 90%;
@@ -113,10 +114,6 @@ ul a {
 .mobile {
 	background-color: hsl(51, 100%, 49%);
 	border-radius: 30px;
-}
-
-.hidden {
-	display: none;
 }
 
 .hero h1 {
@@ -321,6 +318,9 @@ footer ul li:hover {
 		background-size: cover;
 		background-position: center;
 	}
+	.menu {
+		display: block;
+	}
 	.hamburger {
 		display: block;
 	}
@@ -395,4 +395,8 @@ footer ul li:hover {
 	.gal4 {
 		background-image: url(images/mobile/image-gallery-sugar-cubes.jpg);
 	}
+}
+
+.hidden {
+	display: none;
 }
