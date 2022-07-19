@@ -317,6 +317,7 @@ footer ul li:hover {
 		background-image: url(images/mobile/image-header.jpg);
 		background-size: cover;
 		background-position: center;
+		padding: 20px;
 	}
 	.menu {
 		display: block;
