@@ -46,6 +46,7 @@ header {
 	background-image: url(images/desktop/image-header.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	width: 100%;
 	padding: 20px 40px;
 	color: #fff;
@@ -57,6 +58,7 @@ header {
 nav {
 	justify-content: space-between;
 	align-items: center;
+	display: flex;
 }
 
 .logo {
@@ -85,6 +87,36 @@ ul a {
 	background-color: hsl(202, 93%, 72%);
 	font-family: 'Fraunces', serif;
 	cursor: pointer;
+}
+
+/* HAMBRGER MENU */
+.menu {
+	background-color: #fff;
+	color: hsl(232, 10%, 55%);
+	width: 90%;
+	top: 80px;
+	left: auto;
+	right: auto;
+	text-align: center;
+	padding: 40px 100px;
+	position: absolute;
+}
+.menu p {
+	font-weight: 900;
+	padding: 20px;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.hamburger {
+	display: none;
+}
+.mobile {
+	background-color: hsl(51, 100%, 49%);
+	border-radius: 30px;
+}
+
+.hidden {
+	display: none;
 }
 
 .hero h1 {
@@ -284,10 +316,42 @@ footer ul li:hover {
 }
 
 @media only screen and (max-width: 600px) {
+	header {
+		background-image: url(images/mobile/image-header.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	.hamburger {
+		display: block;
+	}
+	nav {
+		display: none;
+	}
+
 	.grid {
 		display: block;
 	}
-
+	.grid-area {
+		padding: 0 10%;
+	}
+	.pic1 {
+		background-image: url(images/mobile/image-transform.jpg);
+		background-position: center;
+	}
+	.pic2 {
+		background-image: url(images/mobile/image-stand-out.jpg);
+		background-position: center;
+	}
+	.pic3 {
+		background-image: url(images/mobile/image-graphic-design.jpg);
+		background-position: center;
+		padding-top: 200px;
+	}
+	.pic4 {
+		background-image: url(images/mobile/image-photography.jpg);
+		background-position: center;
+		padding-top: 200px;
+	}
 	.testimonial {
 		flex-direction: column;
 	}
@@ -317,5 +381,18 @@ footer ul li:hover {
 
 	.gallery {
 		min-width: 200px;
+		background-position: center;
+	}
+	.gal1 {
+		background-image: url(images/mobile/image-gallery-milkbottles.jpg);
+	}
+	.gal2 {
+		background-image: url(images/mobile/image-gallery-orange.jpg);
+	}
+	.gal3 {
+		background-image: url(images/mobile/image-gallery-cone.jpg);
+	}
+	.gal4 {
+		background-image: url(images/mobile/image-gallery-sugar-cubes.jpg);
 	}
 }
